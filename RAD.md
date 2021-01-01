@@ -1,7 +1,6 @@
 I am creating a chrome extension that stops the user from procrastinating by filtering videos out that do not have to do with education while still allowing videos that can help the user learn.
 
 Functional/Non Functional Requirements:
-
 	- I want to be able to:
 		○ only watch educational videos on YouTube
 			 so I can learn new content
