@@ -8,8 +8,8 @@ gui:
     move user's page back to home screen when illegal
 
 data:
-    find user's youtube video url
-    find keywords from video
+    find user's youtube video url DONE
+    find keywords from video DONE
 
 algorithm:
     compare keywords to illegal keywords
