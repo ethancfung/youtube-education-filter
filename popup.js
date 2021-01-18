@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function onclick() {
         chrome.tabs.query({ currentWindow: true, active: true },
             function (tabs) {
-                chrome.tabs.sendMessage(tabs[0].id, 'hi', setCount)
+                chrome.tabs.sendMessage(tabs[0].id, '', turnOn)
             })
     }
 
-    function setCount(res) {
+    function turnOn(res) {
         const div = document.createElement('div')
-        div.textContent = `${res.count} bears`
+        div.textContent = `Filter is on!`
         document.body.appendChild(div)
     }
 

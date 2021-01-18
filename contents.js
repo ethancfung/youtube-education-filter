@@ -1,5 +1,8 @@
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    const re = new RegExp('bear', 'gi')
-    const matches = document.documentElement.innerHTML.match(re)
-    sendResponse({ count: matches.length })
-})
+chrome.runtime.onMessage.addListener(gotMessage);
+
+function gotMessage(message, sender, sendResponse) {
+    if (message.txt === 'turn on') {
+        let keywords = document.querySelector('meta[name="keywords"]');
+        console.log(keywords);
+    }
+}

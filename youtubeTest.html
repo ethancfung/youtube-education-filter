@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube API</title>
+</head>
+
+<body>
+    YouTube Subscribers
+    <div id="subCount"></div>
+
+    <script>
+
+        // Get Subscribers
+        const youtubeKey = 'AIzaSyC6gMGG2cxbHMo3Aqp0H-zxfn8RU3EPaeg';
+        const youtubeUser = 'UCaLJzO1bKVPQwb6GnBBgslQ';
+        const subCount = document.getElementById('subCount');
+        const keyword = 'nba'
+
+        let getSubscribers = () => {
+            //"https://www.googleapis.com/youtube/v3/search?part=snippet&q=".urlencode($kwd)."&maxResults=".$max."&order=viewCount&key={YOUR_API_KEY}"
+            fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeUser}&key=${youtubeKey}`)
+                .then(response => {
+                    return response.json()
+                })
+                .then(data => {
+                    console.log(data);
+                    subCount.innerHTML = data["items"][0].statistics.subscriberCount;
+                })
+
+        }
+
+        getSubscribers();
+
+    </script>
+</body>
+
+</html>

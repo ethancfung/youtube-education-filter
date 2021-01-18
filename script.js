@@ -1,3 +1,7 @@
+const { google } = require('googleapis');
+
+google.youtube('v3')
+
 gapi.load("client", loadClient);
 
 function loadClient() {
