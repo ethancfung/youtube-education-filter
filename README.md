@@ -10,6 +10,7 @@ gui:
 data:
     find user's youtube video url DONE
     find keywords from video DONE
+    data does not reset when going to a new video unless webpage is refreshed, must fix bug
 
 algorithm:
     compare keywords to illegal keywords
